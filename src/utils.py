@@ -5,7 +5,6 @@ def print_line():
     print("-" * 40)
 
 def input_data():
-    patients = []
 
     while True:
         age = int(input("Age: "))
@@ -14,10 +13,10 @@ def input_data():
         hr = int(input("Heart Rate: "))
         chol = int(input("Cholesterol: "))
 
-        patients.append([age, bp, sugar, hr, chol])
+        patients = f"{age}, {bp}, {sugar}, {hr}, {chol}"
 
         again = input("Add another patient? (y/n): ")
-
+        
         with open("data/patients.csv", "a", newline="") as file:
             writer = csv.writer(file)
             writer.writerow(patients)
