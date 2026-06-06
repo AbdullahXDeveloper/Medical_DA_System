@@ -4,8 +4,8 @@ from analysis import (
     high_risk_patients,
     age_group_analysis
 )
-
 from visualization import plots
+
 
 def main():
     data = load_data("data/patients.csv")
