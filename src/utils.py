@@ -1,4 +1,5 @@
 import numpy as np
+import csv
 
 def print_line():
     print("-" * 40)
@@ -17,7 +18,12 @@ def input_data():
 
         again = input("Add another patient? (y/n): ")
 
+        with open("data/patients.csv", "a", newline="") as file:
+            writer = csv.writer(file)
+            writer.writerow(patients)
+   
         if again.lower() != "y":
             break
 
+    print("Patient data saved successfully!")
     return np.array(patients)

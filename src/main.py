@@ -5,7 +5,9 @@ from analysis import (
     age_group_analysis
 )
 from visualization import plots
+from utils import input_data
 
+input_data()
 
 def main():
     data = load_data("data/patients.csv")
